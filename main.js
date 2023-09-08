@@ -11,7 +11,7 @@ function main() {
     var vertices = 
         [
             -0.5, 0.5,  1.0, 1.0, 0.0,
-            -0.5, -0.5, 0.7, 0.0, 1.0,
+            -0.5, -0.5, 0.0, 1.0, 1.0,
             0.0, -0.5,  1.0, 0.0, 1.0
         ];
 
@@ -96,54 +96,6 @@ function main() {
     gl.drawArrays(gl.TRIANGLES, 0, 3);
 
 }
-  //Attach vertex shader source code
-//   gl.shaderSource(vertShader, vertexShader);
-//   //Compile the vertex shader
-//   gl.compileShader(vertShader);
-
-
-//   // Create fragment shader object
-//   var fragShader = gl.createShader(gl.FRAGMENT_SHADER);
-//   // Attach fragment shader source code
-//   gl.shaderSource(fragShader, fragmentShader);
-//   // Compile the fragment shader
-//   gl.compileShader(fragShader);
-
-
-//   // Create a shader program object to store combined shader program
-//   var shaderProgram = gl.createProgram();
-//   // Attach a vertex shader
-//   gl.attachShader(shaderProgram, vertShader);
-//   // Attach a fragment shader
-//   gl.attachShader(shaderProgram, fragShader);
-//   // Link both programs
-//   gl.linkProgram(shaderProgram);
-//   // Use the combined shader program object
-//   gl.useProgram(shaderProgram);
-
-
-//   /* Step 4: Associate the shader programs to buffer objects */
-//   //Bind vertex buffer object
-//   gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
-//   //Get the attribute location
-//   var coord = gl.getAttribLocation(shaderProgram, "coordinates");
-//   //point an attribute to the currently bound VBO
-//   gl.vertexAttribPointer(coord, 2, gl.FLOAT, false, 0, 0);
-//   //Enable the attribute
-//   gl.enableVertexAttribArray(coord);
-
-
-//   /* Step5: Drawing the required object (triangle) */
-//   // Clear the canvas
-//   gl.clearColor(0.5, 0.5, 0.5, 0.9);
-//   // Enable the depth test
-//   gl.enable(gl.DEPTH_TEST);
-//   // Clear the color buffer bit
-//   gl.clear(gl.COLOR_BUFFER_BIT);
-//   // Set the view port
-//   gl.viewport(0,0,canvas.width,canvas.height);
-//   // Draw the triangle
-//   gl.drawArrays(gl.TRIANGLES, 0, 3);
 
 
 
