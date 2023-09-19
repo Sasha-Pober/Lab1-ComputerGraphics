@@ -276,10 +276,8 @@ function drawAndRotateRect(canvasLoc) {
     var mov_matrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
     var view_matrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 
-    //translating z
-    view_matrix[14] = view_matrix[14] - 6; //zoom
+    view_matrix[14] = view_matrix[14] - 6; 
 
-    /*=======================rotation========================*/
     function rotateZ(m, angle) {
         var c = Math.cos(angle);
         var s = Math.sin(angle);
@@ -292,8 +290,6 @@ function drawAndRotateRect(canvasLoc) {
         m[5] = c * m[5] + s * mv4;
         m[9] = c * m[9] + s * mv8;
     }
-
-    /*=================Drawing===========================*/
 
     var time_old = 0;
     var animate = function (time) {
@@ -327,7 +323,7 @@ function moveFigure(canvasLoc) {
 
     const vertices = 
     [
-        0.0, 0.5, -0.1, 0.0, 0.1, 0.0, 0.0, -0.5
+        0.0, 0.5, 0.5, 0.0, 0.0, -0.5, -0.5, 0.0
     ];
     const colours = 
     [
@@ -401,7 +397,7 @@ function moveFigure(canvasLoc) {
     
 
     let initialPositionOfTriangle = 0.0;
-    const step = 0.03;
+    const step = 0.01;
     let directionOfMovementOfTriangle = "down";
     const animate = function () {
         for (let i = 0; i < vertices.length / 2; i++) {
